@@ -10,7 +10,6 @@ today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
-birthday_jun = os.environ['BIRTHDAY_JUN']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
@@ -34,11 +33,7 @@ def get_birthday():
     next = next.replace(year=next.year + 1)
   return (next - today).days
   
-def get_birthday_jun():
-  nex = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
-  if nex < datetime.now():
-    nex = nex.replace(year=nex.year + 1)
-  return (nex - today).days
+
 
 
 def get_words():
