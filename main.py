@@ -34,11 +34,11 @@ def get_birthday():
     next = next.replace(year=next.year + 1)
   return (next - today).days
   
-  def get_birthday_jun():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
-  if next < datetime.now():
-    next = next.replace(year=next.year + 1)
-  return (next - today).days
+def get_birthday_jun():
+  nex = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
+  if nex < datetime.now():
+    nex = nex.replace(year=nex.year + 1)
+  return (nex - today).days
 
 
 def get_words():
