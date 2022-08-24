@@ -12,7 +12,6 @@ start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
 birthday_jun = os.environ['BIRTHDAY_JUN']
-zhounian = str(8-26)
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
@@ -44,7 +43,7 @@ def get_birthday_jun():
   return (nex - today).days
 
 def get_zhounian():
-  ne = datetime.strptime(str(date.today().year) + "-" + zhounian, "%Y-%m-%d")
+  ne = datetime.strptime(str(date.today().year) + "-" + start_date, "%Y-%m-%d")
   if ne < datetime.now():
     ne = nex.replace(year=next.year + 1)
   return (ne - today).days
