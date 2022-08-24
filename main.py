@@ -57,3 +57,4 @@ for user_id in user_ids:
   count+=1
 
 print("发送了" + str(count) + "条消息")
+print("当前时间"+today)
