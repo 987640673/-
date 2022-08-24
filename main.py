@@ -11,6 +11,7 @@ todays= datetime.now().strftime('%Y年%m月%d日 ')
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
+birthday_jun = os.environ['BIRTHDAY_JUN']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
