@@ -7,7 +7,7 @@ import os
 import random
 
 today = datetime.now()
-todays= datetime.now("D")
+todays= datetime.now().strftime(‘%D’)
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
@@ -33,7 +33,8 @@ def get_birthday():
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
   return (next - today).days
-  
+
+
 
 
 
@@ -58,4 +59,4 @@ for user_id in user_ids:
   count+=1
 
 print("发送了" + str(count) + "条消息")
-print("当前时间"+str(today))
+print("当前时间"+str(todays))
