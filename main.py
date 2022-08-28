@@ -39,13 +39,13 @@ def get_birthday():
 def get_birthday_jun():
   nex = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
   if nex < datetime.now():
-    nex = nex.replace(year=next.year + 1)
+    nex = nex.replace(year=nex.year + 1)
   return (nex - today).days
 
 def get_zhounian():
   ne = datetime.strptime(str(date.today().year) + "-" + zhounian, "%Y-%m-%d")
   if ne < datetime.now():
-    ne = ne.replace(year=next.year + 1)
+    ne = ne.replace(year=ne.year + 1)
   return (ne - today).days
 
 def get_words():
