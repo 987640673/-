@@ -43,7 +43,7 @@ def get_birthday_jun():
   return (nex - today).days
 
 def get_zhounian():
-  ne = datetime.strptime(str(date.today().year) + "-" + start_date, "%Y-%m-%d")
+  ne = datetime.strptime(str(date.today().year) + "-" + zhounian, "%Y-%m-%d")
   if ne < datetime.now():
     ne = nex.replace(year=next.year + 1)
   return (ne - today).days
