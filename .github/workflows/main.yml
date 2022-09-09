@@ -32,3 +32,4 @@ jobs:
       BIRTHDAY_JUN: ${{ secrets.BIRTHDAY_JUN }}
       ZHOUNIAN: ${{ secrets.ZHOUNIAN }}
       CITY: ${{ secrets.CITY }}
+      WORDS: ${{ secrets.WORDS }}
