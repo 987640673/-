@@ -71,7 +71,7 @@ data = { "date":{"value":str(todays),"color":get_random_color()},
         "zhounian":{"value":get_zhounian(),"color":get_random_color()},
         "birthday_left":{"value":get_birthday(),"color":get_random_color()},
         
-        "words":{"value":get_words(),"color":get_random_color()},
+        #"words":{"value":get_words(),"color":get_random_color()},
         "birthday_right":{"value":get_birthday_jun(),"color":get_random_color()},
        
         "highest": {"value":highest,"color":get_random_color()},
