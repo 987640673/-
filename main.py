@@ -18,6 +18,7 @@ zhounian = os.environ["ZHOUNIAN"]
 user_ids = os.environ["USER_ID"].split("\n")
 template_id = os.environ["TEMPLATE_ID"]
 words = os.environ["WORDS"]
+guoqing = os.environ["guoqing"]
 
 
 def get_weather():
