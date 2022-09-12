@@ -17,7 +17,7 @@ app_secret = os.environ["APP_SECRET"]
 zhounian = os.environ["ZHOUNIAN"]
 user_ids = os.environ["USER_ID"].split("\n")
 template_id = os.environ["TEMPLATE_ID"]
-#words = os.environ["WORDS"]
+words = os.environ["WORDS"]
 
 
 def get_weather():
@@ -49,12 +49,12 @@ def get_zhounian():
     ne = ne.replace(year=ne.year + 1)
   return (ne - today).days
 
-#def get_words():
+def get_words():
   #words = requests.get("https://api.shadiao.pro/chp")
   #if words.status_code != 200:
     #return get_words()
  # return words.json()['data']['text']
-  #return words
+  return words
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
@@ -71,7 +71,7 @@ data = { "date":{"value":str(todays),"color":get_random_color()},
         "zhounian":{"value":get_zhounian(),"color":get_random_color()},
         "birthday_left":{"value":get_birthday(),"color":get_random_color()},
         
-        #"words":{"value":get_words(),"color":get_random_color()},
+        "words":{"value":get_words(),"color":get_random_color()},
         "birthday_right":{"value":get_birthday_jun(),"color":get_random_color()},
        
         "highest": {"value":highest,"color":get_random_color()},
