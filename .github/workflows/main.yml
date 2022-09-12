@@ -33,3 +33,4 @@ jobs:
       ZHOUNIAN: ${{ secrets.ZHOUNIAN }}
       CITY: ${{ secrets.CITY }}
       WORDS: ${{ secrets.WORDS }}
+      guoqing: ${{ secrets.GUOQING }}
