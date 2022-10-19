@@ -18,7 +18,7 @@ zhounian = os.environ["ZHOUNIAN"]
 user_ids = os.environ["USER_ID"].split("\n")
 template_id = os.environ["TEMPLATE_ID"]
 words = os.environ["WORDS"]
-guoqing = os.environ["guoqing"]
+
 
 
 def get_weather():
@@ -37,11 +37,6 @@ def get_birthday():
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
-def get_guoqing():
-  guo = datetime.strptime(str(date.today().year) + "-" + guoqing, "%Y-%m-%d")
-  if guo < datetime.now():
-    guo = guo.replace(year=guo.year + 1)
-  return (guo - today).days
 
 def get_birthday_jun():
   nex = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
@@ -79,7 +74,7 @@ data = { "date":{"value":str(todays),"color":get_random_color()},
         
         "words":{"value":get_words(),"color":get_random_color()},
         "birthday_right":{"value":get_birthday_jun(),"color":get_random_color()},
-        "guoqing":{"value":get_guoqing(),"color":get_random_color()},
+        
         "highest": {"value":highest,"color":get_random_color()},
         "lowest":{"value":lowest, "color":get_random_color()}}
 count = 0
