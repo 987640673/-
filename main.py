@@ -7,8 +7,8 @@ import os
 import random
 import datetime
 
-today = datetime.now()
-todays= (datetime.now()+datetime.timedelta(days=1)).strftime('%Y年%m月%d日 ')
+today = datetime.datetime.now()
+todays= (datetime.datetime.now()+datetime.timedelta(days=1)).strftime('%Y年%m月%d日 ')
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
