@@ -33,21 +33,21 @@ def get_count():
   return delta.days
 
 def get_birthday():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
-  if next < datetime.now():
+  next = datetime.datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
+  if next < datetime.datetime.now():
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
 
 def get_birthday_jun():
-  nex = datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
-  if nex < datetime.now():
+  nex = datetime.datetime.strptime(str(date.today().year) + "-" + birthday_jun, "%Y-%m-%d")
+  if nex < datetime.datetime.now():
     nex = nex.replace(year=nex.year + 1)
   return (nex - today).days
 
 def get_zhounian():
-  ne = datetime.strptime(str(date.today().year) + "-" + zhounian, "%Y-%m-%d")
-  if ne < datetime.now():
+  ne = datetime.datetime.strptime(str(date.today().year) + "-" + zhounian, "%Y-%m-%d")
+  if ne < datetime.datetime.now():
     ne = ne.replace(year=ne.year + 1)
   return (ne - today).days
 
